@@ -1,6 +1,7 @@
 source("getData.R")
 
 plot4 <- function(){
+    png(file = "plot4.png") # set device to png file
     graph_data <- getData()
     # create DateTime column to contain Date + Time as a Date
     graph_data$DateTime <- strptime(paste(graph_data$Date, graph_data$Time), "%d/%m/%Y %H:%M:%S")
@@ -18,5 +19,5 @@ plot4 <- function(){
     legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), c("black", "red", "blue"), bty="n")
     #graph 4
     plot(graph_data$DateTime, graph_data$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
-    
+    dev.off() # close png file devide
 }
