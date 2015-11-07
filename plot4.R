@@ -8,9 +8,9 @@ plot4 <- function(){
     
     par(mfrow = c(2, 2))
     #graph 1
-    plot(graph_data$DateTime, graph_data$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+    plot(graph_data$DateTime, graph_data$Global_active_power, type="l", xlab="", ylab="Global Active Power")
     #graph 2
-    plot(graph_data$DateTime, graph_data$Voltage, type="l", xlab="", ylab="Voltage")
+    plot(graph_data$DateTime, graph_data$Voltage, type="l", xlab="datetime", ylab="Voltage")
     #graph 3
     plot(graph_data$DateTime, graph_data$Sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
     lines(graph_data$DateTime, graph_data$Sub_metering_1)
