@@ -2,7 +2,7 @@ source("getData.R")
 
 plot4 <- function(){
     png(file = "plot4.png") # set device to png file
-    graph_data <- getData()
+    graph_data <- getData() # function for downloading and subsetting data is in getData.R
     # create DateTime column to contain Date + Time as a Date
     graph_data$DateTime <- strptime(paste(graph_data$Date, graph_data$Time), "%d/%m/%Y %H:%M:%S")
     
