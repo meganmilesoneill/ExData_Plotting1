@@ -9,6 +9,6 @@ plot3 <- function(){
     lines(graph_data$DateTime, graph_data$Sub_metering_1)
     lines(graph_data$DateTime, graph_data$Sub_metering_2, col="red")
     lines(graph_data$DateTime, graph_data$Sub_metering_3, col="blue")
-    legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), c("black", "red", "blue"))
+    legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=c(1, 1, 1), col=c("black", "red", "blue"))
     dev.off() # close png file devide
 }
